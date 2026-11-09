@@ -1,4 +1,4 @@
-# CPL STP attractor code
+# STP_attractor
 
 Code and figure source data accompanying the manuscript *Separate Routes of Synaptic Facilitation Shape Oscillation Frequency and Bump Restoration in an Attractor Network*.
 
@@ -58,4 +58,8 @@ The tests cover route-specific synaptic updates, checkpoint continuation, activi
 | `model_sweep_tables/` | Archived parameter-sweep summary tables |
 | `tests/` | Model and analysis tests |
 
-Repository: https://github.com/NJUTBP/CPL_STP_Attractor_Code
+Repository: https://github.com/NJUTBP/STP_attractor
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE).

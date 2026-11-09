@@ -1,0 +1,2 @@
+tau_x_ms,alpha_per_ms,tau_nmda_ms,tau_r_ms,dt_ms,n_cycles,frequency_hz,rho_full,rho_output
+2,0.5,100,20,0.05,25,6.4453125,0.88871427517,0.4

@@ -1,0 +1,13 @@
+[confirmatory]
+# Optional generalization grid. Do not run until the anchor confirmation is decided.
+tau_facilitation_ms = [250.0, 1000.0, 2500.0]
+tau_recovery_ms = [5.0, 20.0, 80.0, 160.0]
+seeds = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]
+noise_levels_pa = [0.0, 30.0, 60.0, 90.0]
+temporal_modes = ["dynamic", "facilitation_only", "depletion_only"]
+stationary_abs_shift_cutoff_deg = 10.0
+localization_failure_fraction_cutoff = 0.2
+bootstrap_repeats = 10000
+primary_tau_facilitation_ms = 1000.0
+primary_tau_recovery_ms = 20.0
+primary_mode = "dynamic"

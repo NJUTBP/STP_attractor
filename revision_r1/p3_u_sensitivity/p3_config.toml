@@ -1,0 +1,57 @@
+# P3 U sensitivity (Revision Plan v3 section 8), within the continuous-gain model.
+# Phase-17 format (read with experiment.phase17_physiological.load_phase17_config) plus a [p3] section.
+# Pre-registered values: do not edit after results exist; log any change in DEVIATIONS.md.
+
+[paths]
+base_config = "config/phase4_causal.toml"           # frozen reference model; only U is changed
+anchor_reference = "config/anchor_reference.json"  # frozen reference values used by the U = 0.4 anchor check
+
+[grid]
+u_baseline = [0.2, 0.3, 0.4, 0.5, 0.6]
+tau_facilitation_ms = [1000.0]
+tau_recovery_ms = [20.0]
+
+[run]
+seeds = [0, 1, 2, 3]                 # = Phase 8/10 sweep seeds (4 trials per setting, as in Fig. 2c/S3)
+theta_noise_pa = 0.0
+attractor_noise_pa = 60.0            # not used by P3
+variants = ["raw"]                   # full model at its own U, frozen conductances (no matching to the reference)
+hybrid_modes = ["u_output_only", "u_release_only", "mean_u_release"]
+include_neither = false
+max_calibration_waves = 3
+calibration_tolerance = 0.01
+calibration_validity = 0.02
+
+[restoration]                        # module-D protocol, only at [p3].restoration_u
+seeds = [200, 201, 202, 203, 204, 205, 206, 207]
+deltas_deg = [11.25]
+conditions = ["dynamic", "u_output_only", "u_release_only"]
+include_trace_shifts = false
+continuation_ms = 2500.0
+readout_ms = 2000.0
+window_ms = 400.0
+
+[functional]                         # Phase-17 functional rule (reported; theta is not required for routes)
+min_theta_fraction = 0.75
+max_localization_failure_0pa = 0.25
+
+[decision]
+release_route_max_abs_error_hz = 1.0
+output_route_min_abs_error_hz = 2.0
+restoration_min_F2s = 0.10
+generalizes_fraction = 0.8
+fails_fraction = 0.2
+
+[p3]
+output = "results/revision_r1/p3_u_sensitivity"
+reference_u = 0.4
+restoration_u = [0.3, 0.5]
+# interpretable regime (required before routes are calibrated at a U value), over the 4 seeds:
+max_localization_failure_fraction = 0.25
+stationary_max_shift_deg = 10.0
+min_stationary_fraction = 0.75
+min_normalized_peak_power = 0.10
+min_oscillatory_fraction = 0.75
+min_interpretable_nonreference = 3   # U_ROBUST needs >= 3 of the 4 non-reference U values interpretable
+bootstrap_repeats = 10000
+bootstrap_seed = 20261013

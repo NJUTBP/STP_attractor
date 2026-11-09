@@ -1,0 +1,4 @@
+condition,endpoint,abs_delta,mean,ci_low,ci_high,n_pairs
+dynamic,F_clamp(600ms)-F_normal(600ms),11.25,0.3494868808,0.2949189811,0.4082031886,16
+u_output_only,F_clamp(600ms)-F_normal(600ms),11.25,0.5294085185,0.4988381222,0.5545613527,16
+u_release_only,F_clamp(600ms)-F_normal(600ms),11.25,-0.02625892922,-0.128946714,0.06615333444,15

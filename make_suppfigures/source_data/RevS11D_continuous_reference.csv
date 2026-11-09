@@ -1,0 +1,5 @@
+model,frequency_hz,source
+full,6.4453125,"Fig. S1 source data, 10 trials"
+release_only,6.34765625,"Fig. S3 summary, 4 trials"
+output_only,11.181640625,"Fig. S3 summary, 4 trials"
+static,14.375,"Fig. S1 source data, 10 trials"

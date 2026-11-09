@@ -1,0 +1,4 @@
+condition,peak_delta_deg,peak_velocity_deg_s
+dynamic,33.75,51.473071524328006
+u_output_only,22.5,30.95363456077666
+u_release_only,33.75,0.3968325961719804

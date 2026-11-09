@@ -1,0 +1,191 @@
+{
+  "combo_count": 42,
+  "seed_count_per_combo": 4,
+  "current_parameter_anchor": {
+    "combo_id": "tf_1000_tr_20",
+    "tau_facilitation_ms": 1000.0,
+    "tau_recovery_ms": 20.0,
+    "full_frequency_hz": 6.4453125,
+    "full_theta_fraction": 1.0,
+    "full_noise_mean_abs_delta_deg": 6.674268345408908,
+    "full_p_match_theta": 0.7042313040351903,
+    "full_mean_spike_release_u": 0.888714275170488,
+    "neither_frequency_hz": 10.9375,
+    "neither_frequency_error_hz": 4.4921875,
+    "neither_abs_frequency_error_hz": 4.4921875,
+    "neither_noise_mean_abs_delta_deg": 14.947224031050908,
+    "neither_noise_error_deg": 8.272955685642,
+    "u_output_only_final_scale": 0.8721143384065277,
+    "u_output_only_frequency_hz": 11.181640625,
+    "u_output_only_frequency_sd_hz": 0.09765625,
+    "u_output_only_theta_fraction": 1.0,
+    "u_output_only_peak_power": 0.4470121279165042,
+    "u_output_only_actual_p_match_theta": 0.7038760057177756,
+    "u_output_only_p_match_relative_error": -0.0005045193466675259,
+    "u_output_only_zero_noise_mean_abs_shift_deg": 1.8281478992669804,
+    "u_output_only_stationary_fraction": 1.0,
+    "u_output_only_noise_mean_abs_delta_deg": 16.645605786787595,
+    "u_output_only_noise_delta_sd_deg": 21.31704574288912,
+    "u_output_only_localization_failure_fraction_60pa": 0.0,
+    "u_output_only_frequency_error_hz": 4.736328125,
+    "u_output_only_abs_frequency_error_hz": 4.736328125,
+    "u_output_only_noise_error_deg": 9.971337441378687,
+    "u_output_only_abs_noise_error_deg": 9.971337441378687,
+    "u_output_only_theta_classification_agreement": 1.0,
+    "u_release_only_final_scale": 2.1329119922475366,
+    "u_release_only_frequency_hz": 6.34765625,
+    "u_release_only_frequency_sd_hz": 0.11276372445109878,
+    "u_release_only_theta_fraction": 1.0,
+    "u_release_only_peak_power": 0.29482709901057,
+    "u_release_only_actual_p_match_theta": 0.7042868062333425,
+    "u_release_only_p_match_relative_error": 7.881245527453646e-05,
+    "u_release_only_zero_noise_mean_abs_shift_deg": 5.542548350691501,
+    "u_release_only_stationary_fraction": 0.75,
+    "u_release_only_noise_mean_abs_delta_deg": 13.17564183948523,
+    "u_release_only_noise_delta_sd_deg": 12.120053719785046,
+    "u_release_only_localization_failure_fraction_60pa": 0.0,
+    "u_release_only_frequency_error_hz": -0.09765625,
+    "u_release_only_abs_frequency_error_hz": 0.09765625,
+    "u_release_only_noise_error_deg": 6.501373494076322,
+    "u_release_only_abs_noise_error_deg": 6.501373494076322,
+    "u_release_only_theta_classification_agreement": 1.0,
+    "mean_u_release_final_scale": 2.133982993354528,
+    "mean_u_release_frequency_hz": 6.396484375,
+    "mean_u_release_frequency_sd_hz": 0.09765625,
+    "mean_u_release_theta_fraction": 1.0,
+    "mean_u_release_peak_power": 0.2821487619286556,
+    "mean_u_release_actual_p_match_theta": 0.7042576585795165,
+    "mean_u_release_p_match_relative_error": 3.742313665296041e-05,
+    "mean_u_release_zero_noise_mean_abs_shift_deg": 3.282913923188996,
+    "mean_u_release_stationary_fraction": 1.0,
+    "mean_u_release_noise_mean_abs_delta_deg": 18.603625193871075,
+    "mean_u_release_noise_delta_sd_deg": 21.616377427777955,
+    "mean_u_release_localization_failure_fraction_60pa": 0.0,
+    "mean_u_release_frequency_error_hz": -0.048828125,
+    "mean_u_release_abs_frequency_error_hz": 0.048828125,
+    "mean_u_release_noise_error_deg": 11.929356848462167,
+    "mean_u_release_abs_noise_error_deg": 11.929356848462167,
+    "mean_u_release_theta_classification_agreement": 1.0,
+    "best_frequency_reconstruction_mode": "mean_u_release",
+    "best_frequency_reconstruction_error_hz": 0.048828125
+  },
+  "mechanism_modes": {
+    "both_dynamic": "Phase-8 Full STP (u in output and dynamic-u resource release)",
+    "neither_dynamic": "Phase-9 gain-rescued depletion (U in output and fixed-U resource release)",
+    "u_output_only": "dynamic u in output; fixed-U resource release",
+    "u_release_only": "U*R output; dynamic u controls resource release",
+    "mean_u_release": "U*R output; resource release uses Full-STP pooled mean spike-event u"
+  },
+  "reconstruction": {
+    "neither": {
+      "median_absolute_frequency_error_hz": 4.5166015625,
+      "mean_absolute_frequency_error_hz": 6.361607142857143,
+      "fraction_within_0p5_hz": 0.0,
+      "fraction_within_1_hz": 0.023809523809523808,
+      "fraction_within_2_hz": 0.09523809523809523,
+      "theta_classification_agreement_fraction": 0.4523809523809524,
+      "spearman_full_vs_mode_frequency": {
+        "rho": -0.2727936165013233,
+        "pvalue": 0.08048605645000172,
+        "n": 42
+      },
+      "median_absolute_noise_error_deg": 6.746529684922731,
+      "mean_absolute_noise_error_deg": 8.024378687821203,
+      "spearman_full_vs_mode_noise": {
+        "rho": -0.17024552305323717,
+        "pvalue": 0.2810723759228114,
+        "n": 42
+      }
+    },
+    "u_output_only": {
+      "median_absolute_frequency_error_hz": 7.177734375,
+      "mean_absolute_frequency_error_hz": 8.53910900297619,
+      "fraction_within_0p5_hz": 0.0,
+      "fraction_within_1_hz": 0.0,
+      "fraction_within_2_hz": 0.0,
+      "theta_classification_agreement_fraction": 0.42857142857142855,
+      "spearman_full_vs_mode_frequency": {
+        "rho": -0.2178530954664055,
+        "pvalue": 0.1657611551890656,
+        "n": 42
+      },
+      "median_absolute_noise_error_deg": 4.751870711538556,
+      "mean_absolute_noise_error_deg": 6.5965444790706576,
+      "spearman_full_vs_mode_noise": {
+        "rho": 0.1692731545255652,
+        "pvalue": 0.28387004810311,
+        "n": 42
+      },
+      "gain_match_quality": {
+        "median_absolute_relative_error": 0.002029923220247686,
+        "max_absolute_relative_error": 0.04399595524620739,
+        "fraction_within_2_percent": 0.8333333333333334,
+        "fraction_within_5_percent": 1.0
+      }
+    },
+    "u_release_only": {
+      "median_absolute_frequency_error_hz": 0.1953125,
+      "mean_absolute_frequency_error_hz": 0.43247767857142855,
+      "fraction_within_0p5_hz": 0.7857142857142857,
+      "fraction_within_1_hz": 0.9047619047619048,
+      "fraction_within_2_hz": 0.9761904761904762,
+      "theta_classification_agreement_fraction": 0.9523809523809523,
+      "spearman_full_vs_mode_frequency": {
+        "rho": 0.8845717328754688,
+        "pvalue": 7.927366089817052e-15,
+        "n": 42
+      },
+      "median_absolute_noise_error_deg": 6.01906223157062,
+      "mean_absolute_noise_error_deg": 8.708492471310185,
+      "spearman_full_vs_mode_noise": {
+        "rho": 0.18321043675553034,
+        "pvalue": 0.24549171179388832,
+        "n": 42
+      },
+      "gain_match_quality": {
+        "median_absolute_relative_error": 0.0012461882375172087,
+        "max_absolute_relative_error": 0.08366687993589865,
+        "fraction_within_2_percent": 0.9285714285714286,
+        "fraction_within_5_percent": 0.9761904761904762
+      }
+    },
+    "mean_u_release": {
+      "median_absolute_frequency_error_hz": 0.1953125,
+      "mean_absolute_frequency_error_hz": 0.5103701636904762,
+      "fraction_within_0p5_hz": 0.7380952380952381,
+      "fraction_within_1_hz": 0.8809523809523809,
+      "fraction_within_2_hz": 0.9523809523809523,
+      "theta_classification_agreement_fraction": 0.9523809523809523,
+      "spearman_full_vs_mode_frequency": {
+        "rho": 0.8506815562786175,
+        "pvalue": 9.850652407154926e-13,
+        "n": 42
+      },
+      "median_absolute_noise_error_deg": 7.382458259676406,
+      "mean_absolute_noise_error_deg": 8.97267055636789,
+      "spearman_full_vs_mode_noise": {
+        "rho": 0.2736407098290252,
+        "pvalue": 0.079513255310104,
+        "n": 42
+      },
+      "gain_match_quality": {
+        "median_absolute_relative_error": 0.0011859651554006903,
+        "max_absolute_relative_error": 0.06808677596772307,
+        "fraction_within_2_percent": 0.9047619047619048,
+        "fraction_within_5_percent": 0.9285714285714286
+      }
+    }
+  },
+  "best_frequency_reconstruction_mode_counts": {
+    "mean_u_release": 7,
+    "u_release_only": 33,
+    "neither": 2
+  },
+  "interpretation": {
+    "u_output_only_success": "Direct temporal modulation by u(t) is sufficient once mean gain is matched.",
+    "u_release_only_success": "The key role of facilitation is its dynamic control of resource depletion; direct u(t) output modulation is dispensable.",
+    "mean_u_release_success": "A higher mean release probability is sufficient to reshape R(t); temporal u->R coupling is not required.",
+    "only_full_succeeds": "Direct u(t) output modulation and u(t)->R(t) coupling act synergistically; neither route alone reconstructs Full STP.",
+    "scope": "All new hybrid outputs are independently matched to Full-STP mean E->I gain. Mean-u-release uses a spike-event-weighted Full-STP release probability, not a hand-tuned value."
+  }
+}

@@ -1,0 +1,5 @@
+limit_percent,n_paired_settings,output_median_abs_frequency_error_hz,release_median_abs_frequency_error_hz
+all,42,7.177734375,0.1953125
+1.0,30,4.2724609375,0.1953125
+2.0,35,4.6875,0.1953125
+5.0,41,7.421875,0.1953125

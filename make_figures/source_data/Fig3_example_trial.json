@@ -1,0 +1,79 @@
+{
+  "schema": "Fig3_example_trial_v2 (CPL revision 5)",
+  "created_utc": "2026-10-27T15:43:23.797912+00:00",
+  "data_set": "profile-snapshot set (Phase-16 module B): continuations of the noise-free confirmation-set (Phase-15) pre-perturbation states; 10-ms snapshots of s_NMDA, u, R",
+  "seed": 213,
+  "shift_deg": 11.25,
+  "shift_time_ms": 3100.0,
+  "noise_pa": 0.0,
+  "selection": "minimum J = sum of squared z of F_rest(2 s) over activity only, + u, + R, among trials passing |z| <= 1, t90 within IQR, trajectory RMS <= median",
+  "revision4_rule_seed": 201,
+  "this_trial": {
+    "F_rest_2s_A": 0.2926134054,
+    "z_A": 0.09444040465541517,
+    "F_rest_2s_U": 0.02485263434,
+    "z_U": 0.22772048979623066,
+    "F_rest_2s_R": 0.3958797627,
+    "z_R": 0.35883968756325957,
+    "J": 0.18954153287501152,
+    "revision4_rule_abs_dev_A": 0.01583359576250004,
+    "traj_rms_A_deg": 0.4999802207682236,
+    "traj_rms_U_deg": 0.5185580788344236,
+    "traj_rms_R_deg": 0.802605159661228,
+    "t90_A_ms": 290.0,
+    "passes_checks": true
+  },
+  "confirmation_means_F_rest_2s": {
+    "activity_shift": 0.2767798096375,
+    "activity_u_shift": -0.0005633684264374998,
+    "activity_r_shift": 0.334064295421875,
+    "co_shift": 2.189221026560625e-15
+  },
+  "phi_s_restoration_2s_directions_averaged": {
+    "activity_shift": 0.24702411009627545,
+    "activity_u_shift": -0.008607967287624252,
+    "activity_r_shift": 0.4305013728747832
+  },
+  "phi_s_restoration_2s_single_branches": {
+    "activity_shift": {
+      "p": 0.13045139920924886,
+      "m": 0.3635968209833019
+    },
+    "activity_u_shift": {
+      "p": 0.08438102330301389,
+      "m": -0.1015969578782625
+    },
+    "activity_r_shift": {
+      "p": 0.6770920605019013,
+      "m": 0.18391068524766496
+    }
+  },
+  "F_rest_2s_400ms_pav_single_branches_snapshot_set": {
+    "activity_shift": {
+      "p": 0.1392589309087372,
+      "m": 0.44596787994199505,
+      "directions_averaged": 0.2926134054253661
+    },
+    "activity_u_shift": {
+      "p": 0.04258500859517278,
+      "m": 0.007120260093750441,
+      "directions_averaged": 0.02485263434446161
+    },
+    "activity_r_shift": {
+      "p": 0.6061740811809941,
+      "m": 0.18558544414674238,
+      "directions_averaged": 0.39587976266386826
+    }
+  },
+  "max_abs_diff_vs_archived_B_kinematics_deg": {
+    "activity_shift:phi_s_disp_deg": 1.5987211554602254e-14,
+    "activity_shift:psi_u_disp_deg": 1.4210854715202004e-14,
+    "activity_shift:psi_D_disp_deg": 7.993605777301127e-15,
+    "activity_u_shift:phi_s_disp_deg": 1.5987211554602254e-14,
+    "activity_u_shift:psi_u_disp_deg": 1.5987211554602254e-14,
+    "activity_u_shift:psi_D_disp_deg": 1.4210854715202004e-14,
+    "activity_r_shift:phi_s_disp_deg": 1.5987211554602254e-14,
+    "activity_r_shift:psi_u_disp_deg": 1.4210854715202004e-14,
+    "activity_r_shift:psi_D_disp_deg": 1.4210854715202004e-14
+  }
+}

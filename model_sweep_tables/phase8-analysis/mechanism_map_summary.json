@@ -1,0 +1,191 @@
+{
+  "combo_count": 42,
+  "seed_count_per_combo": 4,
+  "baseline": {
+    "theta_mean_frequency_hz": 31.15234375,
+    "theta_band_fraction": 0.0,
+    "noise_mean_absolute_endpoint_delta_deg": 11.804809097684853
+  },
+  "current_parameter_anchor": {
+    "combo_id": "tf_1000_tr_20",
+    "tau_facilitation_ms": 1000.0,
+    "tau_recovery_ms": 20.0,
+    "log10_tau_facilitation": 3.0,
+    "log10_tau_recovery": 1.3010299956639813,
+    "dynamic_frequency_hz": 6.4453125,
+    "dynamic_frequency_sd_hz": 0.0,
+    "dynamic_matched_static_frequency_hz": 14.453125,
+    "dynamic_matched_static_frequency_sd_hz": 0.0,
+    "dynamic_temporal_slowing_hz": 8.0078125,
+    "dynamic_theta_fraction": 1.0,
+    "dynamic_matched_static_theta_fraction": 0.0,
+    "dynamic_peak_power": 0.2618135029384574,
+    "dynamic_matched_static_peak_power": 0.46333472484002863,
+    "dynamic_p_match_theta": 0.7042313040351903,
+    "dynamic_p_match_attractor": 0.696376147302409,
+    "dynamic_zero_noise_mean_abs_shift_deg": 1.9232707863176373,
+    "dynamic_stationary_fraction": 1.0,
+    "dynamic_noise_mean_abs_delta_deg": 6.674268345408908,
+    "dynamic_matched_static_noise_mean_abs_delta_deg": 26.842449431088482,
+    "dynamic_noise_resistance_gain_deg": 20.168181085679574,
+    "dynamic_noise_delta_sd_deg": 7.701150264200965,
+    "dynamic_matched_static_noise_delta_sd_deg": 31.912056735786567,
+    "dynamic_localization_failure_fraction_60pa": 0.0,
+    "dynamic_matched_static_localization_failure_fraction_60pa": 0.0,
+    "facilitation_only_frequency_hz": 13.28125,
+    "facilitation_only_frequency_sd_hz": 0.0,
+    "facilitation_only_matched_static_frequency_hz": 13.0859375,
+    "facilitation_only_matched_static_frequency_sd_hz": 0.0,
+    "facilitation_only_temporal_slowing_hz": -0.1953125,
+    "facilitation_only_theta_fraction": 0.0,
+    "facilitation_only_matched_static_theta_fraction": 0.0,
+    "facilitation_only_peak_power": 0.38069874481693267,
+    "facilitation_only_matched_static_peak_power": 0.3858858897039208,
+    "facilitation_only_p_match_theta": 0.9165407103763166,
+    "facilitation_only_p_match_attractor": 0.844830332365041,
+    "facilitation_only_zero_noise_mean_abs_shift_deg": 1.2706337315065568,
+    "facilitation_only_stationary_fraction": 1.0,
+    "facilitation_only_noise_mean_abs_delta_deg": 22.648745941674417,
+    "facilitation_only_matched_static_noise_mean_abs_delta_deg": 22.13534904395101,
+    "facilitation_only_noise_resistance_gain_deg": -0.5133968977234069,
+    "facilitation_only_noise_delta_sd_deg": 11.788549026682954,
+    "facilitation_only_matched_static_noise_delta_sd_deg": 30.511679565332432,
+    "facilitation_only_localization_failure_fraction_60pa": 0.0,
+    "facilitation_only_matched_static_localization_failure_fraction_60pa": 0.0,
+    "depletion_only_frequency_hz": 23.6328125,
+    "depletion_only_frequency_sd_hz": 1.8182604223657475,
+    "depletion_only_matched_static_frequency_hz": 36.279296875,
+    "depletion_only_matched_static_frequency_sd_hz": 0.18699748198365979,
+    "depletion_only_temporal_slowing_hz": 12.646484375,
+    "depletion_only_theta_fraction": 0.0,
+    "depletion_only_matched_static_theta_fraction": 0.0,
+    "depletion_only_peak_power": 0.15420698230432686,
+    "depletion_only_matched_static_peak_power": 0.49464211367210065,
+    "depletion_only_p_match_theta": 0.32662492008659855,
+    "depletion_only_p_match_attractor": 0.3634437297360675,
+    "depletion_only_zero_noise_mean_abs_shift_deg": 0.4805032668408309,
+    "depletion_only_stationary_fraction": 1.0,
+    "depletion_only_noise_mean_abs_delta_deg": 18.684777970174,
+    "depletion_only_matched_static_noise_mean_abs_delta_deg": 23.475242488758628,
+    "depletion_only_noise_resistance_gain_deg": 4.790464518584628,
+    "depletion_only_noise_delta_sd_deg": 24.216703752301424,
+    "depletion_only_matched_static_noise_delta_sd_deg": 30.706047849517702,
+    "depletion_only_localization_failure_fraction_60pa": 0.0,
+    "depletion_only_matched_static_localization_failure_fraction_60pa": 0.0,
+    "dynamic_frozen_frequency_hz": 13.671875,
+    "dynamic_frozen_frequency_sd_hz": 0.0,
+    "dynamic_frozen_theta_fraction": 0.0,
+    "dynamic_frozen_zero_noise_mean_abs_shift_deg": 1.9447903012847017,
+    "dynamic_temporal_vs_frozen_slowing_hz": 7.2265625,
+    "dynamic_spatial_vs_scalar_slowing_hz": 0.78125,
+    "dynamic_frozen_profile_mean": 0.4903853703871218,
+    "dynamic_frozen_profile_sd_across_e": 0.14209464060904212
+  },
+  "theta_region_fraction": {
+    "dynamic": 0.9761904761904762,
+    "facilitation_only": 0.0,
+    "depletion_only": 0.3333333333333333
+  },
+  "stationary_region_fraction": {
+    "dynamic": 0.8809523809523809,
+    "facilitation_only": 1.0,
+    "depletion_only": 0.8333333333333334
+  },
+  "parameter_associations": {
+    "log_tau_f_vs_dynamic_frequency_hz": {
+      "rho": -0.6470189304019841,
+      "pvalue": 3.6551337771884813e-06,
+      "n": 42
+    },
+    "log_tau_r_vs_dynamic_frequency_hz": {
+      "rho": -0.6731373221072459,
+      "pvalue": 1.0382584911131862e-06,
+      "n": 42
+    },
+    "log_tau_f_vs_dynamic_temporal_slowing_hz": {
+      "rho": -0.23966808246608612,
+      "pvalue": 0.12633132927525392,
+      "n": 42
+    },
+    "log_tau_r_vs_dynamic_temporal_slowing_hz": {
+      "rho": 0.9472630016064584,
+      "pvalue": 2.245690774910692e-21,
+      "n": 42
+    },
+    "log_tau_f_vs_dynamic_noise_resistance_gain_deg": {
+      "rho": -0.07071599838811134,
+      "pvalue": 0.6563058058627127,
+      "n": 42
+    },
+    "log_tau_r_vs_dynamic_noise_resistance_gain_deg": {
+      "rho": -0.1316974190724937,
+      "pvalue": 0.4057649279706539,
+      "n": 42
+    },
+    "log_tau_f_vs_facilitation_only_frequency_hz": {
+      "rho": -1.0,
+      "pvalue": 0.0,
+      "n": 42
+    },
+    "log_tau_r_vs_facilitation_only_frequency_hz": {
+      "rho": 0.0,
+      "pvalue": 1.0,
+      "n": 42
+    },
+    "log_tau_f_vs_facilitation_only_temporal_slowing_hz": {
+      "rho": 0.2342437403008453,
+      "pvalue": 0.13540537041685818,
+      "n": 42
+    },
+    "log_tau_r_vs_facilitation_only_temporal_slowing_hz": {
+      "rho": 0.0,
+      "pvalue": 1.0,
+      "n": 42
+    },
+    "log_tau_f_vs_facilitation_only_noise_resistance_gain_deg": {
+      "rho": -0.17857142857142858,
+      "pvalue": 0.25785583650720995,
+      "n": 42
+    },
+    "log_tau_r_vs_facilitation_only_noise_resistance_gain_deg": {
+      "rho": 0.0,
+      "pvalue": 1.0,
+      "n": 42
+    },
+    "log_tau_f_vs_depletion_only_frequency_hz": {
+      "rho": 0.0,
+      "pvalue": 1.0,
+      "n": 42
+    },
+    "log_tau_r_vs_depletion_only_frequency_hz": {
+      "rho": -0.48571428571428565,
+      "pvalue": 0.0011111440773167195,
+      "n": 42
+    },
+    "log_tau_f_vs_depletion_only_temporal_slowing_hz": {
+      "rho": 0.0,
+      "pvalue": 1.0,
+      "n": 42
+    },
+    "log_tau_r_vs_depletion_only_temporal_slowing_hz": {
+      "rho": 0.9428571428571426,
+      "pvalue": 1.0728131968170364e-20,
+      "n": 42
+    },
+    "log_tau_f_vs_depletion_only_noise_resistance_gain_deg": {
+      "rho": 0.0,
+      "pvalue": 1.0,
+      "n": 42
+    },
+    "log_tau_r_vs_depletion_only_noise_resistance_gain_deg": {
+      "rho": 0.6,
+      "pvalue": 2.6719163469190915e-05,
+      "n": 42
+    }
+  },
+  "interpretation_keys": {
+    "temporal_slowing_hz": "matched-static dominant frequency minus temporal-mode frequency; positive values quantify slowing not explained by mean E->I gain.",
+    "noise_resistance_gain_deg": "matched-static mean |q60-q0| minus temporal-mode mean |q60-q0|; positive values mean the temporal dynamics reduce the incremental 60-pA endpoint perturbation.",
+    "dynamic_temporal_vs_frozen_slowing_hz": "frozen-spatial frequency minus full-dynamic frequency; positive values isolate the part not reproduced by the time-averaged spatial profile."
+  }
+}

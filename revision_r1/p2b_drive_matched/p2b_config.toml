@@ -1,0 +1,42 @@
+# P2b: route-isolated and static controls matched on the total E->I drive (C3) instead of the drive-weighted
+# mean efficacy (C1), in the continuous-gain convention of the paper (reference point only).
+# Pre-registered values (PREREGISTRATION.md).  Do not edit after results exist; log any change in DEVIATIONS.md.
+
+[paths]
+base_config = "config/phase4_causal.toml"   # frozen reference point (U = 0.4, tau_f = 1 s, tau_r = 20 ms)
+# Existing continuous full runs, seeds 0-3, 0 pA, scale 1 -> D_target (identical source and value as P1b).
+target_dir = "results/phase10_facilitation_routes/combos/tf_1000_tr_20/probe_full/dynamic"
+# Existing continuous full runs, seeds 0-9 (the 10 paired trials of Fig. S1) -> full-model frequencies.
+full_frequency_dir = "results/phase6_corrected_full/theta/dynamic"
+# Existing C1-calibrated route runs, seeds 0-3 -> calibration wave 0 (their exact C3 drive is in the NPZ).
+wave0_output_only = "results/phase10_facilitation_routes/combos/tf_1000_tr_20/theta/u_output_only"
+wave0_release_only = "results/phase10_facilitation_routes/combos/tf_1000_tr_20/theta/u_release_only"
+# Existing C1 static control, seeds 0-9 (context only; no decision uses it).
+c1_static_dir = "results/phase6_corrected_full/theta/static_gain"
+output = "results/revision_r1/p2b_drive_matched"
+
+[seeds]
+calibration = [0, 1, 2, 3]                       # = target seeds (paired)
+frequency = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]       # = Fig. S1 frequency set (paired with the full model)
+
+[initial]
+output_only_k_c1 = 0.8721143    # Table S2; wave 0 reads the exact value stored in the NPZ and checks it to 1e-6
+release_only_k_c1 = 2.1329120   # Table S2
+static_p0 = 1.7668              # = g* x p_s* of the P1b drive-matched event static (1.957016 x 0.902801);
+                                #   only sets where the static calibration starts
+
+[calibration]
+max_waves = 5            # waves after wave 0 (D rises sublinearly with k because the bump narrows)
+tolerance = 0.01         # stop when |D - D_target| / D_target < 1 %
+validity = 0.02          # a calibrated model counts only if its final relative error is <= 2 %
+max_step_factor = 4.0
+
+[decision]
+release_max_abs_error_hz = 1.0       # same thresholds as P1b, P3 and Phase 17
+output_min_abs_error_hz = 2.0
+static_min_abs_difference_hz = 2.0
+min_theta_fraction = 0.75            # theta band (4, 12] Hz
+
+[statistics]
+bootstrap_repeats = 10000
+bootstrap_seed = 20261014

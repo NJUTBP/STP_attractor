@@ -1,0 +1,60 @@
+[network]
+ne = 64
+ni = 16
+sigma_ei_deg = 18.0
+j_ei_pos = 1.6
+ie_offset_deg = 90.0
+sigma_ie_deg = 30.0
+g_nmda_ei_ns = 0.8
+g_gaba_ie_ns = 2.4
+g_gaba_ii_ns = 0.04
+background_e_pa = 750.0
+background_i_pa = 325.0
+ms_current_i_pa = -100.0
+tau_noise_ms = 2.0
+
+[stf]
+u_baseline = 0.4
+tau_facilitation_ms = 1000.0
+tau_recovery_ms = 20.0
+
+[simulation]
+dt_ms = 0.1
+duration_ms = 200.0
+cue_start_ms = 0.0
+cue_end_ms = 50.0
+cue_centers_deg = [90.0, 270.0]
+cue_amplitude_pa = 200.0
+cue_half_width_deg = 35.15625
+sampling_rate_hz = 200
+
+[analysis]
+pav_window_ms = 40.0
+pav_step_ms = 5.0
+pav_target_time_ms = 150.0
+target_axis_deg = 90.0
+localization_reference_start_ms = 60.0
+localization_reference_end_ms = 100.0
+localization_target_start_ms = 140.0
+localization_target_end_ms = 180.0
+localization_ratio_cutoff = 0.5
+localization_failure_fraction_cutoff = 0.2
+theta_start_ms = 50.0
+theta_end_ms = 200.0
+theta_low_hz = 4.0
+theta_high_hz = 12.0
+max_psd_hz = 50.0
+welch_window_samples = 16
+welch_overlap_samples = 8
+welch_nfft = 64
+peak_half_width_hz = 1.0
+gain_match_start_ms = 50.0
+gain_match_end_ms = 150.0
+bootstrap_repeats = 100
+
+[experiment]
+attractor_noise_pa = 60.0
+theta_noise_pa = 0.0
+attractor_seeds = [0, 1]
+theta_seeds = [0, 1]
+conditions = ["dynamic", "baseline", "static_gain"]

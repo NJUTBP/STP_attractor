@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
+# Generated simulation results and figures. Keep the bundled source data.
+/results/
+/outputs/
+/CPL_Final_Figures/
+/make_figures/output/
+/make_figures/output_cpl/
+/make_suppfigures/output/
+/make_suppfigures/output_cpl/
+
+Thumbs.db
+.DS_Store

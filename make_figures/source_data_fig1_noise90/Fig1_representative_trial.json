@@ -1,0 +1,73 @@
+{
+  "schema": "Fig1_representative_trial_v1",
+  "purpose": "fig1_descriptive_only",
+  "created_utc": "2026-10-13T14:55:25.112350+00:00",
+  "noise_pa": 90.0,
+  "seed": 105,
+  "condition": "dynamic",
+  "combo": "tf_1000_tr_20",
+  "source_experiment": "phase13_attractor_confirmation",
+  "reference_condition_unchanged": true,
+  "full_trial_is_one_seed_for_panels_b_to_f": true,
+  "raw_path": "results/phase13_attractor_confirmation/combos/tf_1000_tr_20/noise_090/dynamic/seed_0105.npz",
+  "noise_evidence": "raw NPZ; noise_090 directory",
+  "window_s": [
+    5.0,
+    6.2
+  ],
+  "cue_0_to_0p5_verified": true,
+  "psd_peak_hz": 5.078125,
+  "psd_window_s": [
+    1.0,
+    8.0
+  ],
+  "current_record": {
+    "available": true,
+    "n_current_samples": 1600,
+    "sample_time_shape": [
+      1600
+    ],
+    "current_shape": [
+      1600
+    ],
+    "recorded_start_ms": 5.0,
+    "recorded_end_ms": 8000.0,
+    "sample_dt_ms": 5.0,
+    "sampling_hz": 200.0,
+    "psd_sample_count": 1401,
+    "psd_window_s": [
+      1.0,
+      8.0
+    ],
+    "psd_available": true,
+    "reason": "PSD uses only the actually archived I_inh interval"
+  },
+  "psd_method": "Welch: archived current only, Hamming 256, overlap 128, nfft 1024",
+  "stp_replay_assumes_rest_initial_state_at_zero": true,
+  "diagnostics": {
+    "seed": 105,
+    "noise_pa": 90.0,
+    "combo": "tf_1000_tr_20",
+    "n_e_spikes_1_8s": 9302,
+    "bump_center_axial_deg": 90.482,
+    "axial_concentration": 0.84118,
+    "fraction_e_spikes_within_35deg_bump": 0.97517,
+    "n_off_bump_e_spikes_1_8s": 231,
+    "off_bump_rate_hz_per_E_neuron": 0.03223,
+    "max_halfsecond_axial_center_shift_deg": 13.289,
+    "dominant_frequency_hz": 5.0781,
+    "theta_4_12Hz_psd_fraction_1_50Hz": 0.44353,
+    "within_bump_spike_theta_phase_concentration": 0.99252,
+    "phase_matched_spikes_n": 8640,
+    "psd_available": true,
+    "psd_window_s": [
+      1.0,
+      8.0
+    ],
+    "current_start_ms": 5.0,
+    "current_end_ms": 8000.0,
+    "current_sampling_hz": 200.0,
+    "psd_note": "PSD uses only the actually archived I_inh interval"
+  },
+  "cue_verification": "Confirmed for the CPL revision: Phase-13 runs use config/phase4_causal.toml as base config (cue_start_ms = 0, cue_end_ms = 500, 200 pA, centres 90 and 270 deg, half-width 35.15625 deg; experiment/mechanism_map.config_for_combo changes only tau_f and tau_r), and in this trial all 578 E spikes between 0.02 and 0.5 s lie within the cue half-width of 90 or 270 deg (Fig1B_E_spikes.csv). Equivalent to exporting with --cue-confirmed."
+}

@@ -1,0 +1,10 @@
+seed,kind,variable,snapshot_ms,left_deg,right_deg,center_deg
+213,activity_shift,activity,10,-8.84406892,31.34406892,11.25
+213,activity_shift,facilitation,10,-20.54054195,20.54054195,0
+213,activity_shift,depletion,10,-19.95902009,19.95902009,0
+213,activity_u_shift,activity,10,-8.84406892,31.34406892,11.25
+213,activity_u_shift,facilitation,10,-9.290541945,31.79054195,11.25
+213,activity_u_shift,depletion,10,-19.95902009,19.95902009,0
+213,activity_r_shift,activity,10,-8.84406892,31.34406892,11.25
+213,activity_r_shift,facilitation,10,-20.54054195,20.54054195,0
+213,activity_r_shift,depletion,10,-8.709020093,31.20902009,11.25

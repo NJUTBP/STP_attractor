@@ -1,0 +1,87 @@
+{
+  "source": {
+    "phase10_combo_summary": "results/phase10_facilitation_routes/analysis/combo_summary.csv (tf_1000_tr_20)",
+    "phase8_per_seed": "results/phase8_mechanism_map/analysis/per_seed_summary.csv (tf_1000_tr_20, dynamic)",
+    "phase16_moduleD": "results/phase16/module_D/analysis/D_restoration_2s_by_trial.csv (tf 1000, tr 20)"
+  },
+  "anchor": {
+    "u_baseline": 0.4,
+    "tau_facilitation_ms": 1000.0,
+    "tau_recovery_ms": 20.0
+  },
+  "full_p_match_theta": 0.7042313040351903,
+  "full_mean_spike_release_u": 0.888714275170488,
+  "full_frequency_hz_mean": 6.4453125,
+  "u_output_only_final_scale_rounded": 0.8721143384065277,
+  "u_release_only_final_scale_rounded": 2.1329119922475366,
+  "per_seed_theta": {
+    "0": {
+      "frequency_hz": 6.4453125,
+      "zero_noise_abs_shift_1_8_deg": 2.5304690772116345,
+      "noise_endpoint_delta_60pa_deg": -7.460585734814061
+    },
+    "1": {
+      "frequency_hz": 6.4453125,
+      "zero_noise_abs_shift_1_8_deg": 1.9342543276888904,
+      "noise_endpoint_delta_60pa_deg": 6.379518955308157
+    },
+    "2": {
+      "frequency_hz": 6.4453125,
+      "zero_noise_abs_shift_1_8_deg": 1.7108708466907387,
+      "noise_endpoint_delta_60pa_deg": 2.330821044508781
+    },
+    "3": {
+      "frequency_hz": 6.4453125,
+      "zero_noise_abs_shift_1_8_deg": 1.517488893679286,
+      "noise_endpoint_delta_60pa_deg": 10.526147647004636
+    }
+  },
+  "moduleD_F2s_dynamic": {
+    "200_11.25": 0.5926133897569444,
+    "200_22.5": 0.3240388658311631,
+    "201_11.25": 0.2925028483072917,
+    "201_22.5": 0.2926235622829861,
+    "202_11.25": 0.1402492947048611,
+    "202_22.5": 0.2616846720377604,
+    "203_11.25": -0.1444339328342014,
+    "203_22.5": 0.2533433702256944,
+    "204_11.25": 0.3357245551215277,
+    "204_22.5": 0.2523434109157986,
+    "205_11.25": 0.4280320909288194,
+    "205_22.5": 0.294553460015191,
+    "206_11.25": 0.3703328450520833,
+    "206_22.5": 0.2890079074435764,
+    "207_11.25": 0.2399017333984374,
+    "207_22.5": 0.2333099365234374
+  },
+  "moduleD_F2s_u_output_only": {
+    "200_11.25": 0.1209967719184027,
+    "200_22.5": 0.1045115152994792,
+    "201_11.25": 0.1994238959418403,
+    "201_22.5": 0.0269107394748263,
+    "202_11.25": 0.1492099338107638,
+    "202_22.5": -0.0347708808051214,
+    "203_11.25": 0.1249399820963541,
+    "203_22.5": 0.0642040676540798,
+    "204_11.25": 0.3388031005859375,
+    "204_22.5": -0.0001541137695313,
+    "205_11.25": 0.2802741156684027,
+    "205_22.5": 0.103854031032986,
+    "206_11.25": 0.2517032199435763,
+    "206_22.5": 0.1786392211914063,
+    "207_11.25": 0.1854539659288194,
+    "207_22.5": 0.1064576043023003
+  },
+  "csv_rounding_note": "values come from CSVs written with ~6 significant decimals; tolerances below account for this",
+  "tolerances": {
+    "frequency_hz_abs": 1e-06,
+    "angle_deg_abs": 0.0001,
+    "p_match_abs": 5e-06,
+    "release_u_abs": 5e-06,
+    "F2s_abs": 0.0001,
+    "warn_frequency_hz_abs": 0.2,
+    "warn_angle_deg_abs": 0.5,
+    "warn_p_match_rel": 0.001,
+    "warn_F2s_abs": 0.02
+  }
+}

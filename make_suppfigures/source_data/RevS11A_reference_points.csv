@@ -1,0 +1,3 @@
+model,rho,frequency_hz,source
+output_only,0.4,11.181640625,"Fig. S3 summary, reference setting (release fraction = U)"
+full,0.88871427517,6.4453125,"Fig. S3 summary, reference setting (spike-weighted mean release fraction)"

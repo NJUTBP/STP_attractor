@@ -48,9 +48,9 @@ SUPP_CAPTIONS = {
         '22.5° (e); lines connect activity-only and activity + u values from the same trial.'
     ),
     6: (
-        'Fig. S6. Clamp set: restoration and restoring field with the facilitation profile free or '
+        'Fig. S6. Clamp set: positional correction and restoring field with the facilitation profile free or '
         'clamped (16 trials; two shift directions averaged within trial; trailing 150-ms population '
-        'vector). (a)–(c) Restoration fraction after activity-only shifts of 2.8125° to 45° with the '
+        'vector). (a)–(c) Restoration fraction F_rest(t) after activity-only shifts of 2.8125° to 45° with the '
         'facilitation profile free (solid) or clamped (dashed) in the full (a), output-only (b) and '
         'release-only (c) models (means). (d) F_rest(600 ms) at 11.25° for each trial without and with '
         'the clamp; lines connect values from the same trial. (e) Small-offset gains from per-trial fits '
@@ -65,8 +65,8 @@ SUPP_CAPTIONS = {
     ),
     7: (
         'Fig. S7. Profile-snapshot set (16 trials; two shift directions averaged within trial). (a)–(c) '
-        'Displacement from the old position of the activity center φ_s, effective synaptic reference '
-        'ψ_eff, facilitation-trace center ψ_u and depletion-trace center ψ_D after an activity-only '
+        'Angular displacement from the pre-shift position of the E-neuron activity center φ_s, effective '
+        'synaptic reference ψ_eff, facilitation-profile center ψ_u and depletion-profile center ψ_D after an activity-only '
         'shift in the full model at 22.5° (a), the output-only model at 11.25° (b) and the release-only '
         'model at 11.25° (c); lower strips, δ_eff = d_ax(φ_s, ψ_eff). Lines, means; shading, pointwise '
         '95% bootstrap CIs for φ_s, ψ_eff and δ_eff. The full model at 11.25° is shown in Fig. 4(c) of '

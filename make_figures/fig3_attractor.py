@@ -202,16 +202,20 @@ def _key(L, x_mm, y_mm):
 
 BAR_Y = {'activity': 2., 'facilitation': 1., 'depletion': 0.}
 BAR_COLOR = {'activity': ACT, 'facilitation': FAC, 'depletion': DEP}
-BAR_LABEL = {'activity': 'Activity', 'facilitation': 'Facilitation', 'depletion': 'Depletion'}
+BAR_LABEL = {
+    'activity': 'NMDA gating variable',
+    'facilitation': 'Facilitation',
+    'depletion': 'Resource depletion',
+}
 
 
 def draw_figure(d):
     """(a)-(c): one column per shift -- where each state variable was 10 ms after the shift (top) and what the activity
-    centre and the facilitation trace did next (bottom); (d) confirmation-set statistics, ring = this trial."""
-    L = vg.Layout(height_mm=81.)
-    X0, W, G = 17., 30., 4.2            # columns (a)-(c)
+    centre and the facilitation-profile centre did next (bottom); (d) confirmation-set statistics, ring = this trial."""
+    L = vg.Layout(height_mm=87.)
+    X0, W, G = 29.5, 25.8, 3.6          # columns (a)-(c): left margin fits 'NMDA gating variable' cleanly
     YB, HB = 11.5, 36.                  # bottom row: displacement time courses
-    YT, HT = 59., 13.5                  # top row: extents of the state profiles 10 ms after the shift
+    YT, HT = 65.0, 13.5                 # top row: extents of the state profiles 10 ms after the shift
     ext, kin = d['extents'], d['kinematics']
     seed = int(kin.seed.iloc[0])
     for col, kind in enumerate(KINDS):
@@ -223,17 +227,20 @@ def draw_figure(d):
                     color=BAR_COLOR[r.variable], edgecolor='none', zorder=2)
         for xv in (0., DELTA):
             ax.axvline(xv, **GUIDE)
-        ax.set(xlim=(-32, 44), ylim=(-.6, 2.6), xticks=[-20, 0, 20, 40], yticks=[2, 1, 0])
+        ax.set(xlim=(-34, 44), ylim=(-.6, 2.6), xticks=[-20, 0, 20, 40], yticks=[2, 1, 0])
         ax.set_yticklabels([BAR_LABEL[v] for v in ('activity', 'facilitation', 'depletion')] if col == 0 else [])
         ax.tick_params(axis='y', length=0)
         vg.g_ticks(ax, 'x')
-        ax.text(0., 1.04, 'old ', transform=ax.get_xaxis_transform(), ha='right', va='bottom',
+        ax.text(0., 1.04, 'Pre-shift ', transform=ax.get_xaxis_transform(), ha='right', va='bottom',
                 fontsize=vg.FS['note'], color=MID)
         ax.text(DELTA, 1.04, r' $|\Delta\theta|$', transform=ax.get_xaxis_transform(), ha='left', va='bottom',
                 fontsize=vg.FS['note'], color=MID)
+        if col == 0:
+            ax.text(-.24, 1.04, r'$t$ = 10 ms', transform=ax.transAxes, ha='right', va='bottom',
+                    fontsize=vg.FS['note'], color=MID)
         L.letter(x0 - 4.5, YT + HT + 6.0, 'abc'[col], va='center')
-        L.text(x0 + 2.2, YT + HT + 6.0, COL_LABELS[col], ha='left', va='center')
-        # ---- bottom: what the activity centre and the facilitation trace did next ---------------------------------
+        L.text(x0 + 2.0, YT + HT + 6.0, COL_LABELS[col], ha='left', va='center')
+        # ---- bottom: what the activity centre and the facilitation-profile centre did next -----------------------
         bx = L.axes(x0, YB, W, HB)
         k = kin[kin.kind == kind].sort_values('t_ms')
         t = k.t_ms.to_numpy() / 1000.
@@ -244,18 +251,24 @@ def draw_figure(d):
         bx.set(xlim=(0, 2), ylim=(-1.2, 13.2), xticks=[0, .5, 1, 1.5, 2], yticks=[0, 4, 8, 12])
         vg.g_ticks(bx, 'xy')
         if col == 0:
-            bx.set_ylabel('Displacement from\nold position (°)')
+            bx.set_ylabel('Angular displacement from\npre-shift position (°)')
         else:                           # shared y scale: ticks kept, numbers only once
             bx.tick_params(axis='y', labelleft=False)
-        if col == 0:                    # direct labels, drawn once; (b) and (c) use the same encoding
+        if col == 0:                    # direct reference-line labels
             note = dict(fontsize=vg.FS['note'], va='center')
-            bx.text(.3, 10.0, r'activity center $\varphi_s$', color=ACT, ha='left', **note)
-            bx.text(1.97, 3.4, 'facilitation trace ' + vg.psi('u'), color=FAC_TEXT, ha='right', **note)
-            bx.text(1.97, DELTA + .75, r'$|\Delta\theta|$', color=MID, ha='right', **note)
-            bx.text(1.97, .75, 'old', color=MID, ha='right', **note)
+            bx.text(1.97, DELTA + .78, r'$|\Delta\theta|$', color=MID, ha='right', **note)
+            bx.text(1.97, .75, 'Pre-shift position', color=MID, ha='right', **note)
         if col == 1:
             bx.set_xlabel('Time after shift (s)')
-    L.text(X0 + 1.5 * W + G, YT - 6.6, 'Angle from old position (°), 10 ms after the shift', ha='center', va='center')
+    L.text(X0 + 1.5 * W + G, YT - 6.4, 'Angular position relative to pre-shift position (°)', ha='center', va='center')
+    traj_handles = [
+        Line2D([], [], color=ACT, ls='-', lw=1.6, solid_capstyle='butt',
+               label=r'E-neuron activity center $\varphi_s$'),
+        Line2D([], [], color=FAC, ls='--', lw=1.35,
+               label='Facilitation-profile center ' + vg.psi('u')),
+    ]
+    vg.fig_legend(L, traj_handles, X0 + 1.5 * W + G, YB + HB + 4.3, loc='center', ncol=2,
+                  columnspacing=1.6, handlelength=2.2)
 
     # ---- (d) confirmation set, F_rest(2 s); ring = trial of (a)-(c); same panel specification as Fig. 4(a) ---------
     XD = 129.8

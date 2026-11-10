@@ -119,7 +119,7 @@ def _key(fig, L, x_mm, y_mm):
 
 def draw_figure(d):
     """Fig. 4, CPL revision 2: one row, closed axes, letters on one row, one shared key."""
-    L = vg.Layout(height_mm=74.0)
+    L = vg.Layout(height_mm=75.5)
     fig = L.fig
     y, h = 11.0, 46.0
     xa, wa = 16.0, 31.0
@@ -137,10 +137,10 @@ def draw_figure(d):
     ax_c = L.axes(xc, y + 13.5, wc, h - 13.5, sharex=ax_c_sub)
     F5._panel_d(ax_c, {'d_band': d['c_band'], 'd_trials': d.get('c_trials')}, markers=False, ax_sub=ax_c_sub)
 
-    yl = y + h + 3.2
+    yl = y + h + 4.8
     for letter, x in (('a', 1.5), ('b', 53.0), ('c', 116.0)):
         L.letter(x, yl, letter, va='center')
-    _key(fig, L, 1.5, 68.5)          # CPL revision 4 (C): aligned with letter (a); the key now ends above (b)
+    _key(fig, L, 1.5, 70.0)          # CPL revision 4 (C): aligned with letter (a); the key now ends above (b)
     return fig
 
 

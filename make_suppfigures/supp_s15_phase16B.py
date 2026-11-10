@@ -28,10 +28,10 @@ NAME = {'dynamic': 'Full', 'u_output_only': 'Output-only', 'u_release_only': 'Re
 SHORT = {'dynamic': 'Full', 'u_output_only': 'Output', 'u_release_only': 'Release'}
 MODEL_KEY = {'dynamic': 'full', 'u_output_only': 'output', 'u_release_only': 'release'}
 KIN_STYLE = [
-    ('x', 'activity', r'Activity center $\varphi_s$'),
+    ('x', 'activity', r'E-neuron activity center $\varphi_s$'),
     ('psi_eff', 'drive', 'Effective synaptic reference ' + vg.psi(r'\mathrm{eff}')),
-    ('psi_u', 'u', 'Facilitation trace ' + vg.psi('u')),
-    ('psi_D', 'resource', 'Depletion trace ' + vg.psi('D')),
+    ('psi_u', 'u', 'Facilitation-profile center ' + vg.psi('u')),
+    ('psi_D', 'resource', 'Depletion-profile center ' + vg.psi('D')),
 ]
 
 CAPTION = SUPP_CAPTIONS[7]
@@ -93,7 +93,7 @@ def _kinematics(ax, bands, cond, delta, ylabel=False, ax_sub=None):
            ylim=(-.06 * delta, max(1.12 * delta, max(tops) + .04 * delta)),
            yticks=[0, 5, 10, 15, 20, 25] if delta > 15 else [0, 3, 6, 9, 12], xlabel='Time after shift (s)')
     if ylabel:
-        ax.set_ylabel('Displacement from\nold position (°)' if ax_sub is not None else 'Displacement from old position (°)')
+        ax.set_ylabel('Angular displacement from\npre-shift position (°)' if ax_sub is not None else 'Angular displacement from pre-shift position (°)')
     vg.g_ticks(ax, 'xy')
     if ax_sub is not None:
         vg.hide_x(ax)
@@ -116,17 +116,17 @@ def draw_figure(d):
     """Manuscript S7 (CPL revision 2): same column grid as Fig. S6; one trace key on top (names as in the SI);
     model and shift size in each label row; lower strip showing delta_eff."""
     bands = d['bands'] if 'bands' in d else _kinematic_bands(d['kin'])
-    L = vg.Layout(77)
+    L = vg.Layout(82.5)
     fig = L.fig
     X, CW, Y, H = (18., 74., 130.), 37., 11., 47.
-    vg.fig_legend(L, _trace_handles(), 87., 71.8, loc='center', ncol=4, columnspacing=1.5, handlelength=2.6)
+    vg.fig_legend(L, _trace_handles(), 87., 75.0, loc='center', ncol=2, columnspacing=2.4, handlelength=2.6)
     top = Y + H
     for letter, x, cond, delta in zip('abc', X, ['dynamic', 'u_output_only', 'u_release_only'], [22.5, 11.25, 11.25]):
         ax_sub = L.axes(x, Y, CW, 11.)
         ax = L.axes(x, Y + 13.5, CW, H - 13.5, sharex=ax_sub)
         _kinematics(ax, bands, cond, delta, ylabel=(letter == 'a'), ax_sub=ax_sub)
-        L.letter(x - 14., top + 3.2, letter, va='center')
-        L.text(x + 1.0, top + 3.2, f'{NAME[cond]}, ' + r'$|\Delta\theta|$' + f' = {delta:g}°', ha='left', va='center',
+        L.letter(x - 14., top + 4.6, letter, va='center')
+        L.text(x + 1.0, top + 4.6, f'{NAME[cond]}, ' + r'$|\Delta\theta|$' + f' = {delta:g}°', ha='left', va='center',
                color=INK)
     return fig
 

@@ -200,7 +200,7 @@ def panel_fixed_point(ax, fp, fu):
     lim = (3.5, 11.5)
     ax.plot(lim, lim, color=MID, ls=':', lw=vg.LW['ref'], zorder=0)
     ax.set(xlim=lim, ylim=lim, xticks=[4, 6, 8, 10], yticks=[4, 6, 8, 10], xlabel='Full-model frequency (Hz)',
-           ylabel='Fixed point\n' + r'$f = F[u^+(f)]$ (Hz)')
+           ylabel='Self-consistent frequency (Hz)')
     # CPL revision 4 (C): one key for both symbol sets; the filled sweep markers were explained by free text before.
     from matplotlib.legend_handler import HandlerTuple
     sweep = tuple(Line2D([], [], ls='none', marker=TAU_R_STYLE[tr]['marker'], mfc=tau_r_color(tr), mec='white',
@@ -220,7 +220,7 @@ def panel_drive_kernel(ax, k):
     ax.plot(k.t_ms, k.continuous_rho_full, color=full['color'], ls=full['ls'], lw=vg.LW['data'] + .1,
             label=r'$\rho$ = 0.89')
     ax.set(xlim=(0, float(k.t_ms.max())), xticks=[0, 50, 100, 150], ylim=(0, 1.08),
-           xlabel='Time after a spike (ms)', ylabel='$c(t)$ of one\nneuron (normalized)')
+           xlabel='Time after a spike (ms)', ylabel='Normalized NMDA-mediated\ncontribution $c(t)$')
     # CPL revision 4: the key uses the manuscript font like every other label (it was forced to DejaVu Sans).
     ax.legend(loc='upper right', ncol=1, fontsize=vg.FS['legend'],
               handlelength=1.4, handletextpad=.4, labelspacing=.15, borderpad=.25)

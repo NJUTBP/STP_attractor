@@ -263,7 +263,7 @@ def _panel_b(ax, d):
     ax.text(.03, .97, r'$T_\mathrm{w} = 150$ ms', transform=ax.transAxes, ha='left', va='top',
             fontsize=vg.FS['note'], color=MID)
     ax.set(xlim=(135, 615), xticks=[200, 300, 400, 500, 600], ylim=(-.13, .82), yticks=[0, .2, .4, .6, .8],
-           xlabel='Time after shift (ms)', ylabel=r'Restoration fraction $F_\mathrm{rest}(t)$')
+           xlabel='Time after shift (ms)', ylabel=r'$F_\mathrm{rest}(t)$')
     vg.g_ticks(ax)
 
 
@@ -340,7 +340,7 @@ def _panel_d(ax, d, markers=True, ax_sub=None):
     ax.axhline(11.25, ls=':', lw=vg.LW['ref'], color=MID, zorder=0)
     vg.right_tag(ax, 11.25, r'$|\Delta\theta|$')
     ax.set(xlim=(0, 2.5), xticks=[0, .5, 1, 1.5, 2, 2.5], ylim=(-.6, 12.6), yticks=[0, 3, 6, 9, 12],
-           xlabel='Time after shift (s)', ylabel='Displacement from\nold position (°)' if ax_sub is not None else 'Displacement from old position (°)')
+           xlabel='Time after shift (s)', ylabel='Angular displacement from\npre-shift position (°)' if ax_sub is not None else 'Angular displacement from pre-shift position (°)')
     ax.legend(handles=handles, loc='lower right', ncol=1, handlelength=2.4, labelspacing=.25, borderaxespad=.3)
     vg.g_ticks(ax, 'xy')
     if ax_sub is not None:
@@ -406,7 +406,7 @@ def _panel_f(ax, d):
     ax.axhline(0, color='#D9D9D9', lw=.55, zorder=0)
     ax.set_xscale('log')
     ax.set(xlim=(200, 3100), ylim=(-.22, .66), yticks=[-.2, 0, .2, .4, .6],
-           xlabel=r'$\tau_f$ (ms); $\tau_r$ = 20 ms', ylabel=r'$F_{\mathrm{rest}}(2\,\mathrm{s})$')
+           xlabel=r'$\tau_f$ (ms); $\tau_r$ = 20 ms', ylabel=r'$F_{\mathrm{rest}}$(2 s)')
     ax.set_xticks(tfs, ['250', '1,000', '2,500'])
     ax.xaxis.set_minor_formatter(ScalarFormatter())
     ax.tick_params(axis='x', which='minor', bottom=False, labelbottom=False)

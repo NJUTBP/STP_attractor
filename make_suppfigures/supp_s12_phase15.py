@@ -112,7 +112,7 @@ def draw_figure(d):
     fig = L.fig
     axa = L.axes(60., 106., 110., 31.)
     _contrast_forest(axa, d['contrasts'])
-    axa.set_xlabel(r'Paired contrast $\Delta F_\mathrm{rest}(2\,\mathrm{s})$')
+    axa.set_xlabel(r'Paired contrast $\Delta F_\mathrm{rest}$(2 s)')
     CX, CW, RH = (18., 104.), 64., 33.
 
     def strip(ax, delta, show_ylabel):
@@ -121,7 +121,7 @@ def draw_figure(d):
         ax.set_yticks([-.4, -.2, 0, .2, .4, .6])
         vg.g_ticks(ax, 'y')
         if show_ylabel:
-            ax.set_ylabel(r'$F_\mathrm{rest}(2\,\mathrm{s})$')
+            ax.set_ylabel(r'$F_\mathrm{rest}$(2 s)')
         ax.text(.98, .96, r'$|\Delta\theta|$ = ' + f'{delta:g}°', transform=ax.transAxes, ha='right', va='top',
                 fontsize=vg.FS['note'], color=MID)
         vg.categorical(ax)

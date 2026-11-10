@@ -254,7 +254,7 @@ def draw_figure(d, layout_variant='mechanism'):
                 frameon=False, handletextpad=.25, columnspacing=.7, labelspacing=.18, borderaxespad=0.)
     ax_c.set(xlim=(xlim_min, xlim_max), ylim=(ylim_min, ylim_max),
              xticks=[4, 6, 8, 10], yticks=[0, 10, 20, 30],
-             xlabel='Full-model frequency (Hz)', ylabel='Isolated-route frequency (Hz)')
+             xlabel='Full-model frequency (Hz)', ylabel='Route-isolated model\nfrequency (Hz)')
     vg.g_ticks(ax_c, 'xy')
 
     # ---- letters ---------------------------------------------------------------------------------------

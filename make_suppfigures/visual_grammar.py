@@ -364,7 +364,7 @@ def frest_panel(ax, values, encs, labels, connect):
     prespecified paired contrast only, one axis format.  Returns the trial offsets (for marking a trial)."""
     zero_line(ax)
     paired_dots(ax, values, encs, labels, connect=connect, **FREST_PANEL)
-    ax.set(ylabel=r'$F_\mathrm{rest}(2\,\mathrm{s})$', **FREST_AXIS)
+    ax.set(ylabel=r'$F_\mathrm{rest}$(2 s)', **FREST_AXIS)
     categorical(ax)
     g_ticks(ax)
     return trial_offsets(len(values), FREST_PANEL['jitter'])

@@ -23,7 +23,7 @@ def _panels():
         for mod, table, groups, pair in ((f3, 'Fig3D_confirmation_paired.csv', f3.GROUPS, (0, 1)),
                                          (f4, 'Fig4A_recovery_paired.csv', f4.RECOVERY_MODES, (1, 2))):
             fig = mod.draw_figure(mod.load_source_data(SRC))
-            ax = [a for a in fig.axes if 'rest}(2' in a.get_ylabel()][0]
+            ax = [a for a in fig.axes if '2 s' in a.get_ylabel()][0]
             out.append((fig, ax, pd.read_csv(SRC / table).set_index('seed')[groups], pair))
         return out
 

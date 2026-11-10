@@ -94,7 +94,7 @@ def _time_courses(ax, rest_ci, cond, deltas, colors, ylim, show_ylabel=False):
     _zero(ax)
     ax.set(xlim=(135, 615), xticks=[200, 400, 600], ylim=ylim, yticks=[-.2, 0, .2, .4, .6, .8])
     if show_ylabel:
-        ax.set_ylabel(r'Restoration fraction $F_\mathrm{rest}(t)$')
+        ax.set_ylabel(r'$F_\mathrm{rest}(t)$')
     vg.g_ticks(ax, 'y')
 
 
@@ -119,7 +119,7 @@ def _endpoint_pairs(ax, rest, p1):
     _zero(ax)
     ax.set_xticks(xbase + .5, ['Full', 'Output-\nonly', 'Release-\nonly'])
     ax.tick_params(axis='x', length=0)
-    ax.set(xlim=(-.6, 7.1), ylim=(-.35, .95), yticks=[-.2, 0, .2, .4, .6, .8], ylabel=r'$F_\mathrm{rest}(600\,\mathrm{ms})$')
+    ax.set(xlim=(-.6, 7.1), ylim=(-.35, .95), yticks=[-.2, 0, .2, .4, .6, .8], ylabel=r'$F_\mathrm{rest}$(600 ms)')
     vg.g_ticks(ax, 'y')
 
 

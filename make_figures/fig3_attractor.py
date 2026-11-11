@@ -187,7 +187,7 @@ INK, MID, LIGHT = vg.NEUTRAL['ink'], vg.NEUTRAL['mid'], vg.NEUTRAL['light']
 ACT, FAC, DEP = vg.VARIABLES['activity'], vg.VARIABLES['u'], vg.VARIABLES['resource']
 GUIDE = dict(color=MID, ls=':', lw=vg.LW['ref'], zorder=0)
 FAC_TEXT = '#A36A00'                  # darker shade of the facilitation orange: legible as 6-pt text in print
-COL_LABELS = ['Activity only', 'Activity + $u$', 'Activity + $R$']
+COL_LABELS = ['Activity only', 'Activity and {$u_i$}', 'Activity and {$R_i$}']
 
 
 def _key(L, x_mm, y_mm):
@@ -203,9 +203,9 @@ def _key(L, x_mm, y_mm):
 BAR_Y = {'activity': 2., 'facilitation': 1., 'depletion': 0.}
 BAR_COLOR = {'activity': ACT, 'facilitation': FAC, 'depletion': DEP}
 BAR_LABEL = {
-    'activity': 'NMDA gating variable',
-    'facilitation': 'Facilitation',
-    'depletion': 'Resource depletion',
+    'activity': r'$s_i^\mathrm{NMDA}$',
+    'facilitation': r'$u_i - U$',
+    'depletion': r'$D_i$',
 }
 
 
@@ -213,7 +213,7 @@ def draw_figure(d):
     """(a)-(c): one column per shift -- where each state variable was 10 ms after the shift (top) and what the activity
     centre and the facilitation-profile centre did next (bottom); (d) confirmation-set statistics, ring = this trial."""
     L = vg.Layout(height_mm=87.)
-    X0, W, G = 29.5, 25.8, 3.6          # columns (a)-(c): left margin fits 'NMDA gating variable' cleanly
+    X0, W, G = 18.0, 29.5, 4.2          # columns (a)-(c)
     YB, HB = 11.5, 36.                  # bottom row: displacement time courses
     YT, HT = 65.0, 13.5                 # top row: extents of the state profiles 10 ms after the shift
     ext, kin = d['extents'], d['kinematics']
@@ -236,7 +236,7 @@ def draw_figure(d):
         ax.text(DELTA, 1.04, r' $|\Delta\theta|$', transform=ax.get_xaxis_transform(), ha='left', va='bottom',
                 fontsize=vg.FS['note'], color=MID)
         if col == 0:
-            ax.text(-.24, 1.04, r'$t$ = 10 ms', transform=ax.transAxes, ha='right', va='bottom',
+            ax.text(-.14, 1.04, r'$t$ = 10 ms', transform=ax.transAxes, ha='right', va='bottom',
                     fontsize=vg.FS['note'], color=MID)
         L.letter(x0 - 4.5, YT + HT + 6.0, 'abc'[col], va='center')
         L.text(x0 + 2.0, YT + HT + 6.0, COL_LABELS[col], ha='left', va='center')
@@ -275,12 +275,11 @@ def draw_figure(d):
     ax_d = L.axes(XD, YB, len(GROUPS) * vg.FREST_GROUP_MM, YT + HT - YB)
     vals = d['d_pivot'].to_numpy(float)
     off = vg.frest_panel(ax_d, vals, [vg.SHIFTS[k] for k in GROUPS],
-                         ['Activity\nonly', 'Activity\n+ $u$', 'Activity\n+ $R$', 'All\nstates'], connect=[(0, 1)])
+                         ['Activity\nonly', 'Activity\n+ {$u_i$}', 'Activity\n+ {$R_i$}', 'All\nstates'], connect=[(0, 1)])
     row = list(d['d_pivot'].index).index(seed)
     ax_d.scatter(np.arange(3) + off[row], vals[row, :3], s=62, facecolors='none', edgecolors=INK, linewidths=.9, zorder=6)
-    ax_d.scatter([2.40], [.705], s=62, facecolors='none', edgecolors=INK, linewidths=.9, zorder=6)
-    ax_d.text(2.56, .705, 'trial in\n(a)–(c)', ha='left', va='center', fontsize=vg.FS['note'], color=INK,
-              linespacing=1.15)
+    ax_d.scatter([1.52], [.726], s=62, facecolors='none', edgecolors=INK, linewidths=.9, zorder=6)
+    ax_d.text(1.74, .726, 'trial in (a)–(c)', ha='left', va='center', fontsize=vg.FS['note'], color=INK)
     L.letter(XD - 12.3, YT + HT + 6.0, 'd', va='center')
     return L.fig
 

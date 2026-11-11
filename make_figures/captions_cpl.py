@@ -33,7 +33,7 @@ CAPTIONS = {
         'Fig. 3. Positional correction after activity-only and selective STP-state shifts in the full '
         'model. (a–c) Example confirmation trial [black circles in (d)] following shifts of neuronal '
         'activity alone (a), activity and {u_i} (b), or activity and {R_i} (c). Top: Angular extents '
-        'above half maximum of the folded NMDA gating variable s^NMDA (blue), facilitation u_i − U '
+        'above half maximum of the folded NMDA gating variable s_i^NMDA (blue), facilitation u_i − U '
         '(orange), and resource depletion D_i (green) profiles, measured 10 ms after the shift. '
         'Bottom: Angular displacements of the E-neuron activity center φ_s and facilitation-profile '
         'center ψ_u from the pre-shift position (dotted lines, pre-shift position and |Δθ|), sampled '

@@ -45,7 +45,7 @@ SUPP_CAPTIONS = {
         'output-only and release-only models and the static control at 11.25° (b) and 22.5° (c); lines '
         'connect output-only and release-only (b) or full and output-only (c) values from the same '
         'trial. (d), (e) F_rest(2 s) after selective state shifts of the full model at 11.25° (d) and '
-        '22.5° (e); lines connect activity-only and activity + u values from the same trial.'
+        '22.5° (e); lines connect activity-only and activity + {u_i} values from the same trial.'
     ),
     6: (
         'Fig. S6. Clamp set: positional correction and restoring field with the facilitation profile free or '

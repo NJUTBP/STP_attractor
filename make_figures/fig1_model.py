@@ -204,7 +204,7 @@ def draw_figure(d, stp_marginals=False, layout_variant='A', schematic='pending')
     ax_b = L.axes(*raster_rect)
     sp = d['b_spikes']
     ax_b.scatter(sp.time_s, sp.angle_deg, s=1.0, marker='o', linewidths=0, color=INK, rasterized=True, zorder=2)
-    ax_b.set(xlim=(-.08, 8.08), xticks=range(0, 9), xlabel='Time (s)', ylabel='E-cell angle (°)')
+    ax_b.set(xlim=(-.08, 8.08), xticks=range(0, 9), xlabel='Time (s)', ylabel='E-neuron angle (°)')
     _angle_axis(ax_b)
     rep = d.get('representative_metadata')
     if rep is None or rep.get('cue_0_to_0p5_verified', False):
@@ -231,7 +231,7 @@ def draw_figure(d, stp_marginals=False, layout_variant='A', schematic='pending')
         _angle_axis(ax); vg.hide_x(ax)
         ax.text(1.012, .5, tag, transform=ax.transAxes, ha='left', va='center', fontweight='bold',
                 fontsize=vg.FS['label'], color=RAW)
-    L.text(YL, rows['cI'][0] + (rows['cE'][0] + rows['cE'][1] - rows['cI'][0]) / 2, 'Cell angle (°)',
+    L.text(YL, rows['cI'][0] + (rows['cE'][0] + rows['cE'][1] - rows['cI'][0]) / 2, 'Neuron angle (°)',
            rotation=90, ha='center', va='center')
 
     # ---- (e), (f) reconstructed facilitation u and depletion D = 1 - R ----------------------------------
@@ -257,7 +257,7 @@ def draw_figure(d, stp_marginals=False, layout_variant='A', schematic='pending')
         else:
             ax.set(xlim=(start, end), xlabel='Time (s)')
             ax.set_xticks(np.round(np.arange(start, end + 1e-9, .2), 1))
-    L.text(YL, rows['f'][0] + (rows['e'][0] + rows['e'][1] - rows['f'][0]) / 2, 'E-cell angle (°)',
+    L.text(YL, rows['f'][0] + (rows['e'][0] + rows['e'][1] - rows['f'][0]) / 2, 'E-neuron angle (°)',
            rotation=90, ha='center', va='center')
 
     # ---- (d) PSD of the inhibitory current (1-8 s); 0-50 Hz = the dominant-frequency search range -------

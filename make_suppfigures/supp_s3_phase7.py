@@ -100,7 +100,7 @@ def draw_figure(d):
     ax_a.plot(prof.angle_deg, prof.efficacy, color=vg.MODELS['frozen']['color'], lw=1.2)
     ax_a.set(xlim=(0, 360), xticks=[0, 90, 180, 270, 360],
              ylim=vg.pad(float(prof.efficacy.min()), float(prof.efficacy.max()), .1),
-             xlabel='E-cell angle (°)', ylabel='Time-averaged efficacy')
+             xlabel='E-neuron angle (°)', ylabel='Time-averaged efficacy')
     vg.g_ticks(ax_a, 'y')
 
     ax_b = L.axes(75., y, 40., h)

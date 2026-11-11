@@ -24,11 +24,11 @@ LEGACY_PREFIX = 'FigS12'
 CAPTION = SUPP_CAPTIONS[5]
 
 CONTRAST_LABELS = {
-    'PRIMARY_carrier_u': 'Activity only − Activity + $u$',
+    'PRIMARY_carrier_u': 'Activity only − Activity + {$u_i$}',
     'PRIMARY_route_output_vs_release': 'Output-only − Release-only',
     'SUPPORT_co_shift': 'Activity only − All states',
     'SUPPORT_output_vs_static': 'Output-only − Static',
-    'SUPPORT_dynamic_vs_r_shift': 'Activity only − Activity + $R$',
+    'SUPPORT_dynamic_vs_r_shift': 'Activity only − Activity + {$R_i$}',
     'SUPPORT_dynamic_vs_output': 'Full − Output-only',
 }
 CONTRAST_ORDER = list(CONTRAST_LABELS)
@@ -39,7 +39,7 @@ MODEL_LABELS = ['Full', 'Output-\nonly', 'Release-\nonly', 'Static']
 
 SHIFT_KINDS = ['activity_shift', 'activity_u_shift', 'activity_r_shift', 'co_shift']
 SHIFT_ENCS = [vg.SHIFTS[k] for k in SHIFT_KINDS]
-SHIFT_LABELS = ['Activity\nonly', 'Activity\n+ $u$', 'Activity\n+ $R$', 'All\nstates']
+SHIFT_LABELS = ['Activity\nonly', 'Activity\n+ {$u_i$}', 'Activity\n+ {$R_i$}', 'All\nstates']
 
 INK, MID, LIGHT = vg.NEUTRAL['ink'], vg.NEUTRAL['mid'], vg.NEUTRAL['light']
 
